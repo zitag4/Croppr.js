@@ -388,13 +388,13 @@ var Box = function () {
       var height = this.height();
       switch (grow) {
         case 'height':
-          this.resize(this.width(), this.width() * ratio, origin);
+          this.resize(this.width(), this.width() / ratio, origin);
           break;
         case 'width':
           this.resize(this.height() * 1 / ratio, this.height(), origin);
           break;
         default:
-          this.resize(this.width(), this.width() * ratio, origin);
+          this.resize(this.width(), this.width() / ratio, origin);
       }
       return this;
     }
