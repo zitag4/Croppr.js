@@ -132,13 +132,13 @@ export default class Box {
     const height = this.height();
     switch (grow) {
       case 'height': // Grow height only
-        this.resize(this.width(), this.width() * ratio, origin);
+        this.resize(this.width(), this.width() / ratio, origin);
         break;
       case 'width': // Grow width only
         this.resize(this.height() * 1 / ratio, this.height(), origin);
         break;
       default: // Default: Grow height only
-        this.resize(this.width(), this.width() * ratio, origin);
+        this.resize(this.width(), this.width() / ratio, origin);
     }
 
     return this;
