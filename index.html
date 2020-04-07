@@ -23,11 +23,14 @@
 <body>
     <h1>Croppr.js</h1>
     <div class="modal">
-        <img src="https://unsplash.it/500/500/?random" alt="" id="cropper">
+        <img src="assets/Frau.jpg" alt="" id="cropper">
     </div>
 
     <script>
         var croppr = new Croppr('#cropper', {
+            aspectRatio: 4 / 3,
+            startSize: [200, 150,'px'],
+            minSize: [200, 150,'px'],
             onInitialize: (instance) => { console.log(instance); },
             onCropStart: (data) => { console.log('start', data); },
             onCropEnd: (data) => { console.log('end', data); },
