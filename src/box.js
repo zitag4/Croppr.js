@@ -1,4 +1,3 @@
-//test
 /**
  * Box component
  */
@@ -210,7 +209,7 @@ export default class Box {
     if (ratio) {
       if (ratio > 1) {
         maxWidth = maxHeight * 1 / ratio;
-        minHeight = minHeight * ratio;
+        minHeight = minWidth * ratio;
       } else if (ratio < 1) {
         maxHeight = maxWidth * ratio;
         minWidth = minHeight * 1 / ratio;
