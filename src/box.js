@@ -17,7 +17,7 @@ export default class Box {
     this.y2 = y2;
   }
 
-  /** 
+  /**
    * Sets the new dimensions of the box.
    * @param {Number} x1
    * @param {Number} y1
@@ -135,7 +135,7 @@ export default class Box {
         this.resize(this.width(), this.width() / ratio, origin);
         break;
       case 'width': // Grow width only
-        this.resize(this.height() * 1 / ratio, this.height(), origin);
+        this.resize(this.height() * 1 * ratio, this.height(), origin);
         break;
       default: // Default: Grow height only
         this.resize(this.width(), this.width() / ratio, origin);
@@ -209,10 +209,10 @@ export default class Box {
     if (ratio) {
       if (ratio > 1) {
         maxWidth = maxHeight * 1 / ratio;
-        minHeight = minWidth * ratio;
+        minHeight = minWidth / ratio;
       } else if (ratio < 1) {
         maxHeight = maxWidth * ratio;
-        minWidth = minHeight * 1 / ratio;
+        minWidth = minHeight * 1 * ratio;
       }
     }
 
